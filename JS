@@ -1,0 +1,63 @@
+/* now Converting to Fahrenheit  */
+
+var Temperature;
+var C = 32;
+var F = 1.8;
+
+var output = document.getElementById('greeter-output');
+
+var button = document.getElementById('greeter-button');
+button.addEventListener('click', function() {
+
+  Temperature = window.prompt('What is temperature in celcius?');
+
+
+  output.innerHTML = 'There is ' + Temperature + ' Degree Celcius' + '<br><br>';
+
+  output.innerHTML = 'There is ' + (Temperature * F + C) + ' Degree Fahrenheit' +
+    '<br><br>' + output.innerHTML;
+
+
+  let statment = "";
+  if (Temperature >= 20) {
+    statment = 'Put your t shirt';
+      } else if (Temperature >= 12) {
+    statment = 'Put your Jumper';
+  }
+  /* now Temperature is for sure < 12 */
+  else {
+    statment = 'put your Cap';
+  }
+  document.getElementById("greater-output-1").innerHTML = statment + '<br>';
+});
+
+/* now Converting to Celcius */
+
+var Fahrenheit;
+var C = 32;
+var F = 1.8;
+
+var output = document.getElementById('greeter-output-2');
+
+var button = document.getElementById('greeter-button-1');
+button.addEventListener('click', function() {
+Fahrenheit = window.prompt('What is temperature in Fahrenheit?');
+
+output.innerHTML = 'There is ' + Fahrenheit + ' Degree Fahrenheit' + '<br><br>';
+
+output.innerHTML = 'There is ' + (Fahrenheit / F - C) + ' Degree Celcius' + '<br><br>' + output.innerHTML;
+  
+ /* adding if statment */ 
+
+let statment = "";
+  if (Fahrenheit >= 90) {
+    statment = 'Put your t shirt';
+      } else if (Fahrenheit >= 70) {
+    statment = 'Put your Jumper';
+  }
+  /* now Temperature is for sure < 12 */
+  else {
+    statment = 'Put your cap';
+  }
+  document.getElementById("greater-output-3").innerHTML = statment + '<br>';
+});
